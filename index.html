@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--box icons-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+         
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <link rel="stylesheet" type="text/css" href="./styles.css" />
+        <script type="module" src="./main.js"></script>
+
+        <!--css-->
+        <link rel="stylesheet" href="styles.css">
+
+        <title>G-map Navigation</title>
+    </head>
+    <body>
+       
+        <!--header-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">G-Map Navigation</a>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#map" class="nav__link">Map</a></li>
+                        <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+           
+            <!--home-->
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                    <div class="home__img">
+                       <!-- <img src="img/img1.png" alt="" data-speed="-2" class="move"> -->
+                        <img src="img/img2.png" alt="" data-speed="1" class="move">
+                        <img src="img/img3.png" alt="" data-speed="3" class="move">
+                        <img src="img/img4.png" alt="" data-speed="-1" class="move">
+                       <!--  <img src="img/img5.png" alt="" data-speed="-2" class="move"> -->
+                        <img src="img/img6.png" alt="" data-speed="0.5" class="move">
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">G-Map<br> Navigation</h1>
+                        <p class="home__description">Introducing the perfect tool for seamless navigation.<br> With the power of Google Maps,<br> you can easily plan routes and reach your destination hassle-free.</p>
+                        <a href="#map" class="home__button">Get Started</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+       <!-- location -->
+        <div style="display: block">
+            <input
+              id="origin-input"
+              class="controls"
+              type="text"
+              placeholder="Enter an origin location"
+            />
+      
+            <input
+              id="destination-input"
+              class="controls"
+              type="text"
+              placeholder="Enter a destination location"
+            />
+      
+            <div id="mode-selector" class="controls">
+              <input
+                type="radio"
+                name="type"
+                id="changemode-walking"
+                checked="checked"
+              />
+              <label for="changemode-walking">Walking</label>
+      
+              <input type="radio" name="type" id="changemode-transit" />
+              <label for="changemode-transit">Transit</label>
+      
+              <input type="radio" name="type" id="changemode-driving" />
+              <label for="changemode-driving">Driving</label>
+            </div>
+          </div>
+        <!--map--> 
+        <section class="map" id="map">
+            <div class="map__container bd-grid">
+              <div class="map__img">
+                <style>
+                  body { margin: 0; }
+                  #map { position: relative; top: 0px; bottom: 100vh; width: 100vw; height: 100vh; }
+                </style>
+                <div id="map"></div>
+              </div>
+            </div>
+
+            <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly"
+            defer
+          ></script>
+          </section>
+          <!-- features -->
+          <section class="features section bd-container" id="features">
+            <h2 class="section-title">Features Offered</h2>
+
+            <div class="features__container bd-grid">
+              <div class="features__data">
+                <i class='bx bx-navigation features__icon'></i>
+
+                <h3 class="features__title">Routing</h3>
+                <p class="features__description">This responsive website offers Google Maps routing for transit, walking, and driving,<br> allowing you to easily plan your trip no matter your mode of transportation. With real-time traffic updates, you can choose the fastest route and avoid any delays.<br> Whether you're commuting to work, running errands, or exploring a new city, G-Map Navigation has got you covered.</p>
+                <a href="#" class="features__button" onclick="toggle();">Know More</a>
+             
+            </div>
+            </div>
+
+           <div class="vid">
+            <video src="img/video.mp4" controls="true"></video>
+            <img src="img/closee.png" class="close" onclick="toggle();">
+           </div>
+
+          </section>
+          <!-- contact -->
+           <section class="contact section bd-container" id="contact">
+            
+              <h2 class="section-title">Contact</h2>
+               <form action="" class="contact__form">
+                <div class="contact__inputs">
+                  <input type="text" placeholder="Name" class="contact__inputs">
+                  <input type="email" placeholder="Email" class="contact__inputs">
+                </div>
+                <textarea name="" id="" cols="" rows="7" placeholder="Message" class="contact__input"></textarea>
+                  <input type="submit" value="Send Message" class="button contact__button">
+              </form>
+
+        <!--gsap-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+        <!--main.js=-->
+        <script src="main.js"></script>
+    </body>
+</html>
